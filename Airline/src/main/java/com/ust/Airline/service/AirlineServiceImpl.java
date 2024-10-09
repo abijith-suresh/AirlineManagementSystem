@@ -47,7 +47,7 @@ public class AirlineServiceImpl implements AirlineService {
             List<PassengerDto> passengerDTOList = webClientBuilder.baseUrl("http://localhost:9099")
                     .build()
                     .get()
-                    .uri("/passangerinfo/" + flightDTO.getFlightNumber())
+                    .uri("/passengerinfo/" + flightDTO.getFlightNumber())
                     .retrieve()
                     .bodyToMono(new ParameterizedTypeReference<List<PassengerDto>>() {})
                     .block();
